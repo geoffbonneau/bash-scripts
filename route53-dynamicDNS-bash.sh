@@ -6,7 +6,7 @@
 #If it matches, logs that it checked and did not update
 #Else, it logs that it is updating, pipes the ip address into a json formatted file so that it can be called from the AWS CLI and update Route53
 
-#Need to change DNS-NAME and ZONE-ID to the DNS name you are updating and your Route53 Hosted Zone ID
+#Need to create a file within the script's path called lastip, change DNS-NAME and ZONE-ID to the DNS name you are updating and your Route53 Hosted Zone ID
 
 now=$(date +"%m-%d-%Y-%H-%M-%S")
 publicip="$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com)"
